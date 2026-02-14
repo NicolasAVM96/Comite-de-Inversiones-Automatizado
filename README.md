@@ -132,4 +132,5 @@ JSON
         "Endeudamiento": 0.80
     }
 }
+
 Disclaimer: Este proyecto es con fines educativos y de portafolio. No constituye asesoramiento financiero real.
