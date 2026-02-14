@@ -13,7 +13,7 @@ def obtener_datos_historicos(ticket_symbol):
     balance = stock.balance_sheet
     financials = stock.financials
     
-    # Verificamos de datos
+    # Verificacion de datos
     if balance.empty: 
         return None
 
@@ -24,7 +24,7 @@ def obtener_datos_historicos(ticket_symbol):
     fechas_disponibles = balance.columns[:5] 
     
     for fecha in fechas_disponibles:
-        year_str = fecha.strftime('%Y') # Convertimos la fecha a texto "2023"
+        year_str = fecha.strftime('%Y') # Convertimos la fecha a texto
         
         precio_actual = info.get('currentPrice')
 
@@ -112,6 +112,5 @@ def exportar_datos_json(symbol):
     
     print(f"\n✅ Archivo guardado exitosamente: {nombre_archivo}")
 
-# Ejecutar
 exportar_datos_json(symbol)
 # mostrar_datos(symbol)
