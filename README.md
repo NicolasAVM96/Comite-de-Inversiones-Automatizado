@@ -87,17 +87,13 @@ Este proyecto utiliza uv para una gestión de entorno virtual y dependencias ext
 Crea el entorno virtual:
 
 Bash
-uv venv
-Activa el entorno e instala las dependencias:
-
-Bash
 # En Windows
 .venv\Scripts\activate
-uv pip install yfinance pandas flet
+pip install yfinance pandas
 
 # En Mac/Linux
 source .venv/bin/activate
-uv pip install yfinance pandas flet
+uv pip install yfinance pandas
 Opción B: Instalación Clásica con pip
 Si prefieres el método estándar:
 
