@@ -6,9 +6,11 @@ import math
 #symbol = input(f"Ingrese el simbolo de la empresa a evaluar: ")
 symbol = "TSLA"
 
+# Verifica que los datos obtenidos en Yfinance sean int o float
 def verificador_datos(val):
     return val if isinstance(val, (int, float)) and not math.isnan(val) else 0
 
+# Fucnion para obtener los datos historicos de la accion a estudiar(Balances, Estado financiero, Flujos, etc)
 def obtener_datos_historicos(ticket_symbol):
     stock = yf.Ticker(ticket_symbol)
     
@@ -94,7 +96,7 @@ def obtener_datos_historicos(ticket_symbol):
                 "Ventas Totales": ingresos,    
                 "Utilidad Neta": utilidad,   
                 "Free Cash Flow" : fcf,
-                "REO (%)" : round(roe),            
+                "ROE (%)" : round(roe),            
                 "Margen Neto (%)": round(margen_neto, 2), 
                 # Valoracion
                 "EPS (Beneficio/Acción)": round(eps, 2),
@@ -108,23 +110,20 @@ def obtener_datos_historicos(ticket_symbol):
 
     return datos_empresa
 
-def exportar_datos_json(symbol):
+# Funcion para transformar los datos historicos en JSON
+def obtener_datos_json(symbol):
     datos = obtener_datos_historicos(symbol)
     
     if not datos:
         print(f"No se encontraron datos para {symbol}")
         return
-
     # Transformar datos a JSON
     json_str = json.dumps(datos, indent=4, ensure_ascii=False)
-    
-    print(f"--- JSON GENERADO PARA {symbol} ---")
 
-    # Guardar archivo formato JSON
+    #Exportador JSON
     nombre_archivo = f"{symbol}_financiero.json"
     with open(nombre_archivo, 'w', encoding='utf-8') as f:
         f.write(json_str)
-    
-    print(f"\n✅ Archivo guardado exitosamente: {nombre_archivo}")
 
-exportar_datos_json(symbol)
+    return json_str
+    

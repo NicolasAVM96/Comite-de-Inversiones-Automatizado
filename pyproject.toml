@@ -5,5 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "crewai[google-genai]>=1.9.3",
+    "fpdf2>=2.8.5",
+    "langchain-groq>=0.3.8",
+    "langchain-openai>=0.3.23",
+    "litellm>=1.75.3",
     "yfinance>=1.1.0",
 ]
