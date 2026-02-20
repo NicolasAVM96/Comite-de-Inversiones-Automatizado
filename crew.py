@@ -7,11 +7,6 @@ import json
 
 load_dotenv(override=True)
 
-# IMportacion de JSON
-with open('TSLA_financiero.json', 'r', encoding='utf-8') as archivo:
-    json_datos = json.load(archivo)
-    
-
 # --- DEFINICIÓN DE MODELOS ---
 
 # --- ANALISTAS ---

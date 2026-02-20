@@ -3,9 +3,6 @@ import yfinance as yf
 import json
 import math
 
-#symbol = input(f"Ingrese el simbolo de la empresa a evaluar: ")
-symbol = "TSLA"
-
 # Verifica que los datos obtenidos en Yfinance sean int o float
 def verificador_datos(val):
     return val if isinstance(val, (int, float)) and not math.isnan(val) else 0

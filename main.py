@@ -45,6 +45,6 @@ if __name__ == "__main__":
         contenido = tarea.output 
         lista_reportes.append((nombre, contenido))
 
-    # 5. Llamamos a la función del PDF
+    # Llamamos a la función del PDF
     exportar_a_pdf(symbol, lista_reportes, veredicto_final, json_string)
 
