@@ -74,9 +74,9 @@ Integración IA (Futuro): APIs de OpenAI, Google Gemini, Groq, DeepSeek.
 -------------------------------------
 [x] Fase 1: Script de extracción y cálculo financiero (Completado).
 
-[ ] Fase 2: Conexión a APIs de LLMs (Gemini, OpenAI, Groq).
+[x] Fase 2: Conexión a APIs de LLMs (Gemini, OpenAI, Groq).
 
-[ ] Fase 3: Implementación de la lógica del "Juez" (Prompt del Sistema y conteo de votos).
+[x] Fase 3: Implementación de la lógica del "Juez" (Prompt del Sistema y conteo de votos).
 
 [ ] Fase 4: Desarrollo de la UI con Flet para visualizar gráficos y veredictos.
 
